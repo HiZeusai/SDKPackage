@@ -1,0 +1,6 @@
+framework module ZUSDK {
+  umbrella header "ZUSDK.h"
+  export *
+
+  module * { export * }
+}

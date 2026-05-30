@@ -1,0 +1,62 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.2.3 effective-5.10 (swiftlang-6.2.3.3.21 clang-1700.6.3.2)
+// swift-module-flags: -target arm64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name YKIAPStoreKit
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.3
+import Foundation
+import StoreKit
+import Swift
+import UIKit
+@_exported import YKIAPStoreKit
+import YKIAPStoreKitSDK
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 15.0, *)
+@objc final public class YKSwiftPaymentInfo : ObjectiveC.NSObject {
+  @objc final public class var sharedInstance: YKIAPStoreKit.YKSwiftPaymentInfo {
+    @objc get
+  }
+  final public var pruductid: Swift.String
+  final public var currentProducts: [StoreKit.Product]
+  @objc(getProductInfoWithCompletionHandler:) final public func getProductInfo(completionHandler: @escaping () -> Swift.Void)
+  @objc final public func getCurrentProduct() -> Swift.Bool
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 15.0, *)
+@objc final public class YKSwiftPurchase : ObjectiveC.NSObject, StoreKit.SKPaymentTransactionObserver {
+  @objc final public class var sharedInstance: YKIAPStoreKit.YKSwiftPurchase {
+    @objc get
+  }
+  final public var productUDID: Swift.String
+  final public var transatianDic: Foundation.NSMutableDictionary
+  final public var sdkProductId: Swift.String
+  @objc final public func paymentQueue(_ queue: StoreKit.SKPaymentQueue, updatedTransactions transactions: [StoreKit.SKPaymentTransaction])
+  @objc(getProductInfos:completionHandler:) final public func getProductInfos(_ productId: Swift.String, completionHandler: @escaping () -> Swift.Void)
+  @objc(begainPurchaseWithCompletionHandler:) final public func begainPurchase(completionHandler: @escaping () -> Swift.Void)
+  @objc(checkUnFinishOrder:udid:completionHandler:) final public func checkUnFinishOrder(_ productID: Swift.String, udid: Swift.String, completionHandler: @escaping () -> Swift.Void)
+  @objc(listenToTransactionWithCompletionHandler:) final public func listenToTransaction(completionHandler: @escaping () -> Swift.Void)
+  @objc final public func finishTransation()
+  @objc final public func stopListening()
+  @objc deinit
+}
+public enum StoreError : Swift.Error {
+  case failedVerification
+  public static func == (a: YKIAPStoreKit.StoreError, b: YKIAPStoreKit.StoreError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 15.0, *)
+@objc final public class YKProductInfos : ObjectiveC.NSObject {
+  @objc final public class var sharedInstance: YKIAPStoreKit.YKProductInfos {
+    @objc get
+  }
+  final public var productUDID: Swift.String
+  final public var transatianDic: Foundation.NSMutableDictionary
+  final public var currentProducts: [StoreKit.Product]
+  @objc final public func getProductInfos(_ productIDs: Foundation.NSArray, completionHandler: @escaping () -> Swift.Void)
+  @objc deinit
+}
+extension YKIAPStoreKit.StoreError : Swift.Equatable {}
+extension YKIAPStoreKit.StoreError : Swift.Hashable {}

@@ -1,0 +1,2454 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "YKIAPStoreKit",
+    "printedName": "YKIAPStoreKit",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "YKIAPStoreKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "YKIAPStoreKit"
+      },
+      {
+        "kind": "Import",
+        "name": "StoreKit",
+        "printedName": "StoreKit",
+        "declKind": "Import",
+        "moduleName": "YKIAPStoreKit"
+      },
+      {
+        "kind": "Import",
+        "name": "YKIAPStoreKitSDK",
+        "printedName": "YKIAPStoreKitSDK",
+        "declKind": "Import",
+        "moduleName": "YKIAPStoreKit"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "YKSwiftPaymentInfo",
+        "printedName": "YKSwiftPaymentInfo",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "sharedInstance",
+            "printedName": "sharedInstance",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "YKSwiftPaymentInfo",
+                "printedName": "YKIAPStoreKit.YKSwiftPaymentInfo",
+                "usr": "c:@M@YKIAPStoreKit@objc(cs)YKSwiftPaymentInfo"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@YKIAPStoreKit@objc(cs)YKSwiftPaymentInfo(cpy)sharedInstance",
+            "mangledName": "$s13YKIAPStoreKit18YKSwiftPaymentInfoC14sharedInstanceACvpZ",
+            "moduleName": "YKIAPStoreKit",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "YKSwiftPaymentInfo",
+                    "printedName": "YKIAPStoreKit.YKSwiftPaymentInfo",
+                    "usr": "c:@M@YKIAPStoreKit@objc(cs)YKSwiftPaymentInfo"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@YKIAPStoreKit@objc(cs)YKSwiftPaymentInfo(cm)sharedInstance",
+                "mangledName": "$s13YKIAPStoreKit18YKSwiftPaymentInfoC14sharedInstanceACvgZ",
+                "moduleName": "YKIAPStoreKit",
+                "static": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "pruductid",
+            "printedName": "pruductid",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13YKIAPStoreKit18YKSwiftPaymentInfoC9pruductidSSvp",
+            "mangledName": "$s13YKIAPStoreKit18YKSwiftPaymentInfoC9pruductidSSvp",
+            "moduleName": "YKIAPStoreKit",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13YKIAPStoreKit18YKSwiftPaymentInfoC9pruductidSSvg",
+                "mangledName": "$s13YKIAPStoreKit18YKSwiftPaymentInfoC9pruductidSSvg",
+                "moduleName": "YKIAPStoreKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13YKIAPStoreKit18YKSwiftPaymentInfoC9pruductidSSvs",
+                "mangledName": "$s13YKIAPStoreKit18YKSwiftPaymentInfoC9pruductidSSvs",
+                "moduleName": "YKIAPStoreKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13YKIAPStoreKit18YKSwiftPaymentInfoC9pruductidSSvM",
+                "mangledName": "$s13YKIAPStoreKit18YKSwiftPaymentInfoC9pruductidSSvM",
+                "moduleName": "YKIAPStoreKit",
+                "implicit": true,
+                "intro_iOS": "15.0",
+                "declAttributes": [
+                  "Final",
+                  "Available"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "currentProducts",
+            "printedName": "currentProducts",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[StoreKit.Product]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Product",
+                    "printedName": "StoreKit.Product",
+                    "usr": "s:8StoreKit7ProductV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13YKIAPStoreKit18YKSwiftPaymentInfoC15currentProductsSay05StoreB07ProductVGvp",
+            "mangledName": "$s13YKIAPStoreKit18YKSwiftPaymentInfoC15currentProductsSay05StoreB07ProductVGvp",
+            "moduleName": "YKIAPStoreKit",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[StoreKit.Product]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Product",
+                        "printedName": "StoreKit.Product",
+                        "usr": "s:8StoreKit7ProductV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13YKIAPStoreKit18YKSwiftPaymentInfoC15currentProductsSay05StoreB07ProductVGvg",
+                "mangledName": "$s13YKIAPStoreKit18YKSwiftPaymentInfoC15currentProductsSay05StoreB07ProductVGvg",
+                "moduleName": "YKIAPStoreKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[StoreKit.Product]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Product",
+                        "printedName": "StoreKit.Product",
+                        "usr": "s:8StoreKit7ProductV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13YKIAPStoreKit18YKSwiftPaymentInfoC15currentProductsSay05StoreB07ProductVGvs",
+                "mangledName": "$s13YKIAPStoreKit18YKSwiftPaymentInfoC15currentProductsSay05StoreB07ProductVGvs",
+                "moduleName": "YKIAPStoreKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13YKIAPStoreKit18YKSwiftPaymentInfoC15currentProductsSay05StoreB07ProductVGvM",
+                "mangledName": "$s13YKIAPStoreKit18YKSwiftPaymentInfoC15currentProductsSay05StoreB07ProductVGvM",
+                "moduleName": "YKIAPStoreKit",
+                "implicit": true,
+                "intro_iOS": "15.0",
+                "declAttributes": [
+                  "Final",
+                  "Available"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "getProductInfo",
+            "printedName": "getProductInfo(completionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@YKIAPStoreKit@objc(cs)YKSwiftPaymentInfo(im)getProductInfoWithCompletionHandler:",
+            "mangledName": "$s13YKIAPStoreKit18YKSwiftPaymentInfoC010getProductE017completionHandleryyyc_tF",
+            "moduleName": "YKIAPStoreKit",
+            "objc_name": "getProductInfoWithCompletionHandler:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getCurrentProduct",
+            "printedName": "getCurrentProduct()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@YKIAPStoreKit@objc(cs)YKSwiftPaymentInfo(im)getCurrentProduct",
+            "mangledName": "$s13YKIAPStoreKit18YKSwiftPaymentInfoC17getCurrentProductSbyF",
+            "moduleName": "YKIAPStoreKit",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@YKIAPStoreKit@objc(cs)YKSwiftPaymentInfo",
+        "mangledName": "$s13YKIAPStoreKit18YKSwiftPaymentInfoC",
+        "moduleName": "YKIAPStoreKit",
+        "intro_iOS": "15.0",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "ObjC",
+          "Available"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "YKIAPStoreKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "YKIAPStoreKit"
+      },
+      {
+        "kind": "Import",
+        "name": "StoreKit",
+        "printedName": "StoreKit",
+        "declKind": "Import",
+        "moduleName": "YKIAPStoreKit"
+      },
+      {
+        "kind": "Import",
+        "name": "YKIAPStoreKitSDK",
+        "printedName": "YKIAPStoreKitSDK",
+        "declKind": "Import",
+        "moduleName": "YKIAPStoreKit"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "YKSwiftPurchase",
+        "printedName": "YKSwiftPurchase",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "sharedInstance",
+            "printedName": "sharedInstance",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "YKSwiftPurchase",
+                "printedName": "YKIAPStoreKit.YKSwiftPurchase",
+                "usr": "c:@M@YKIAPStoreKit@objc(cs)YKSwiftPurchase"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@YKIAPStoreKit@objc(cs)YKSwiftPurchase(cpy)sharedInstance",
+            "mangledName": "$s13YKIAPStoreKit15YKSwiftPurchaseC14sharedInstanceACvpZ",
+            "moduleName": "YKIAPStoreKit",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "YKSwiftPurchase",
+                    "printedName": "YKIAPStoreKit.YKSwiftPurchase",
+                    "usr": "c:@M@YKIAPStoreKit@objc(cs)YKSwiftPurchase"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@YKIAPStoreKit@objc(cs)YKSwiftPurchase(cm)sharedInstance",
+                "mangledName": "$s13YKIAPStoreKit15YKSwiftPurchaseC14sharedInstanceACvgZ",
+                "moduleName": "YKIAPStoreKit",
+                "static": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "updateListenerTask",
+            "printedName": "updateListenerTask",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "_Concurrency.Task<(), any Swift.Error>?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Task",
+                    "printedName": "_Concurrency.Task<(), any Swift.Error>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "any Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:ScT"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13YKIAPStoreKit15YKSwiftPurchaseC18updateListenerTaskScTyyts5Error_pGSgvp",
+            "mangledName": "$s13YKIAPStoreKit15YKSwiftPurchaseC18updateListenerTaskScTyyts5Error_pGSgvp",
+            "moduleName": "YKIAPStoreKit",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "_Concurrency.Task<(), any Swift.Error>?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Task",
+                        "printedName": "_Concurrency.Task<(), any Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "any Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:ScT"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13YKIAPStoreKit15YKSwiftPurchaseC18updateListenerTaskScTyyts5Error_pGSgvg",
+                "mangledName": "$s13YKIAPStoreKit15YKSwiftPurchaseC18updateListenerTaskScTyyts5Error_pGSgvg",
+                "moduleName": "YKIAPStoreKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "_Concurrency.Task<(), any Swift.Error>?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Task",
+                        "printedName": "_Concurrency.Task<(), any Swift.Error>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "any Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:ScT"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13YKIAPStoreKit15YKSwiftPurchaseC18updateListenerTaskScTyyts5Error_pGSgvs",
+                "mangledName": "$s13YKIAPStoreKit15YKSwiftPurchaseC18updateListenerTaskScTyyts5Error_pGSgvs",
+                "moduleName": "YKIAPStoreKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13YKIAPStoreKit15YKSwiftPurchaseC18updateListenerTaskScTyyts5Error_pGSgvM",
+                "mangledName": "$s13YKIAPStoreKit15YKSwiftPurchaseC18updateListenerTaskScTyyts5Error_pGSgvM",
+                "moduleName": "YKIAPStoreKit",
+                "implicit": true,
+                "intro_iOS": "15.0",
+                "declAttributes": [
+                  "Final",
+                  "Available"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "productUDID",
+            "printedName": "productUDID",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13YKIAPStoreKit15YKSwiftPurchaseC11productUDIDSSvp",
+            "mangledName": "$s13YKIAPStoreKit15YKSwiftPurchaseC11productUDIDSSvp",
+            "moduleName": "YKIAPStoreKit",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13YKIAPStoreKit15YKSwiftPurchaseC11productUDIDSSvg",
+                "mangledName": "$s13YKIAPStoreKit15YKSwiftPurchaseC11productUDIDSSvg",
+                "moduleName": "YKIAPStoreKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13YKIAPStoreKit15YKSwiftPurchaseC11productUDIDSSvs",
+                "mangledName": "$s13YKIAPStoreKit15YKSwiftPurchaseC11productUDIDSSvs",
+                "moduleName": "YKIAPStoreKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13YKIAPStoreKit15YKSwiftPurchaseC11productUDIDSSvM",
+                "mangledName": "$s13YKIAPStoreKit15YKSwiftPurchaseC11productUDIDSSvM",
+                "moduleName": "YKIAPStoreKit",
+                "implicit": true,
+                "intro_iOS": "15.0",
+                "declAttributes": [
+                  "Final",
+                  "Available"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "transatianDic",
+            "printedName": "transatianDic",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NSMutableDictionary",
+                "printedName": "Foundation.NSMutableDictionary",
+                "usr": "c:objc(cs)NSMutableDictionary"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13YKIAPStoreKit15YKSwiftPurchaseC13transatianDicSo19NSMutableDictionaryCvp",
+            "mangledName": "$s13YKIAPStoreKit15YKSwiftPurchaseC13transatianDicSo19NSMutableDictionaryCvp",
+            "moduleName": "YKIAPStoreKit",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSMutableDictionary",
+                    "printedName": "Foundation.NSMutableDictionary",
+                    "usr": "c:objc(cs)NSMutableDictionary"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13YKIAPStoreKit15YKSwiftPurchaseC13transatianDicSo19NSMutableDictionaryCvg",
+                "mangledName": "$s13YKIAPStoreKit15YKSwiftPurchaseC13transatianDicSo19NSMutableDictionaryCvg",
+                "moduleName": "YKIAPStoreKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSMutableDictionary",
+                    "printedName": "Foundation.NSMutableDictionary",
+                    "usr": "c:objc(cs)NSMutableDictionary"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13YKIAPStoreKit15YKSwiftPurchaseC13transatianDicSo19NSMutableDictionaryCvs",
+                "mangledName": "$s13YKIAPStoreKit15YKSwiftPurchaseC13transatianDicSo19NSMutableDictionaryCvs",
+                "moduleName": "YKIAPStoreKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13YKIAPStoreKit15YKSwiftPurchaseC13transatianDicSo19NSMutableDictionaryCvM",
+                "mangledName": "$s13YKIAPStoreKit15YKSwiftPurchaseC13transatianDicSo19NSMutableDictionaryCvM",
+                "moduleName": "YKIAPStoreKit",
+                "implicit": true,
+                "intro_iOS": "15.0",
+                "declAttributes": [
+                  "Final",
+                  "Available"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "sdkProductId",
+            "printedName": "sdkProductId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13YKIAPStoreKit15YKSwiftPurchaseC12sdkProductIdSSvp",
+            "mangledName": "$s13YKIAPStoreKit15YKSwiftPurchaseC12sdkProductIdSSvp",
+            "moduleName": "YKIAPStoreKit",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13YKIAPStoreKit15YKSwiftPurchaseC12sdkProductIdSSvg",
+                "mangledName": "$s13YKIAPStoreKit15YKSwiftPurchaseC12sdkProductIdSSvg",
+                "moduleName": "YKIAPStoreKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13YKIAPStoreKit15YKSwiftPurchaseC12sdkProductIdSSvs",
+                "mangledName": "$s13YKIAPStoreKit15YKSwiftPurchaseC12sdkProductIdSSvs",
+                "moduleName": "YKIAPStoreKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13YKIAPStoreKit15YKSwiftPurchaseC12sdkProductIdSSvM",
+                "mangledName": "$s13YKIAPStoreKit15YKSwiftPurchaseC12sdkProductIdSSvM",
+                "moduleName": "YKIAPStoreKit",
+                "implicit": true,
+                "intro_iOS": "15.0",
+                "declAttributes": [
+                  "Final",
+                  "Available"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "paymentQueue",
+            "printedName": "paymentQueue(_:updatedTransactions:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SKPaymentQueue",
+                "printedName": "StoreKit.SKPaymentQueue",
+                "usr": "c:objc(cs)SKPaymentQueue"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[StoreKit.SKPaymentTransaction]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SKPaymentTransaction",
+                    "printedName": "StoreKit.SKPaymentTransaction",
+                    "usr": "c:objc(cs)SKPaymentTransaction"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@YKIAPStoreKit@objc(cs)YKSwiftPurchase(im)paymentQueue:updatedTransactions:",
+            "mangledName": "$s13YKIAPStoreKit15YKSwiftPurchaseC12paymentQueue_19updatedTransactionsySo09SKPaymentF0C_SaySo0I11TransactionCGtF",
+            "moduleName": "YKIAPStoreKit",
+            "objc_name": "paymentQueue:updatedTransactions:",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getProductInfos",
+            "printedName": "getProductInfos(_:completionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@YKIAPStoreKit@objc(cs)YKSwiftPurchase(im)getProductInfos:completionHandler:",
+            "mangledName": "$s13YKIAPStoreKit15YKSwiftPurchaseC15getProductInfos_17completionHandlerySS_yyctF",
+            "moduleName": "YKIAPStoreKit",
+            "objc_name": "getProductInfos:completionHandler:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "begainPurchase",
+            "printedName": "begainPurchase(completionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@YKIAPStoreKit@objc(cs)YKSwiftPurchase(im)begainPurchaseWithCompletionHandler:",
+            "mangledName": "$s13YKIAPStoreKit15YKSwiftPurchaseC06begainD017completionHandleryyyc_tF",
+            "moduleName": "YKIAPStoreKit",
+            "objc_name": "begainPurchaseWithCompletionHandler:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "checkUnFinishOrder",
+            "printedName": "checkUnFinishOrder(_:udid:completionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@YKIAPStoreKit@objc(cs)YKSwiftPurchase(im)checkUnFinishOrder:udid:completionHandler:",
+            "mangledName": "$s13YKIAPStoreKit15YKSwiftPurchaseC18checkUnFinishOrder_4udid17completionHandlerySS_SSyyctF",
+            "moduleName": "YKIAPStoreKit",
+            "objc_name": "checkUnFinishOrder:udid:completionHandler:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "listenToTransaction",
+            "printedName": "listenToTransaction(completionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@YKIAPStoreKit@objc(cs)YKSwiftPurchase(im)listenToTransactionWithCompletionHandler:",
+            "mangledName": "$s13YKIAPStoreKit15YKSwiftPurchaseC19listenToTransaction17completionHandleryyyc_tF",
+            "moduleName": "YKIAPStoreKit",
+            "objc_name": "listenToTransactionWithCompletionHandler:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "checkVerified",
+            "printedName": "checkVerified(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VerificationResult",
+                "printedName": "StoreKit.VerificationResult<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:8StoreKit18VerificationResultO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13YKIAPStoreKit15YKSwiftPurchaseC13checkVerifiedyx05StoreB018VerificationResultOyxGKlF",
+            "mangledName": "$s13YKIAPStoreKit15YKSwiftPurchaseC13checkVerifiedyx05StoreB018VerificationResultOyxGKlF",
+            "moduleName": "YKIAPStoreKit",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<T>",
+            "declAttributes": [
+              "Final"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "finishTransation",
+            "printedName": "finishTransation()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@YKIAPStoreKit@objc(cs)YKSwiftPurchase(im)finishTransation",
+            "mangledName": "$s13YKIAPStoreKit15YKSwiftPurchaseC16finishTransationyyF",
+            "moduleName": "YKIAPStoreKit",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "stopListening",
+            "printedName": "stopListening()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@YKIAPStoreKit@objc(cs)YKSwiftPurchase(im)stopListening",
+            "mangledName": "$s13YKIAPStoreKit15YKSwiftPurchaseC13stopListeningyyF",
+            "moduleName": "YKIAPStoreKit",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@YKIAPStoreKit@objc(cs)YKSwiftPurchase",
+        "mangledName": "$s13YKIAPStoreKit15YKSwiftPurchaseC",
+        "moduleName": "YKIAPStoreKit",
+        "intro_iOS": "15.0",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "ObjC",
+          "Available"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "StoreError",
+        "printedName": "StoreError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "failedVerification",
+            "printedName": "failedVerification",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(YKIAPStoreKit.StoreError.Type) -> YKIAPStoreKit.StoreError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "StoreError",
+                    "printedName": "YKIAPStoreKit.StoreError",
+                    "usr": "s:13YKIAPStoreKit10StoreErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "YKIAPStoreKit.StoreError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "StoreError",
+                        "printedName": "YKIAPStoreKit.StoreError",
+                        "usr": "s:13YKIAPStoreKit10StoreErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13YKIAPStoreKit10StoreErrorO18failedVerificationyA2CmF",
+            "mangledName": "$s13YKIAPStoreKit10StoreErrorO18failedVerificationyA2CmF",
+            "moduleName": "YKIAPStoreKit"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StoreError",
+                "printedName": "YKIAPStoreKit.StoreError",
+                "usr": "s:13YKIAPStoreKit10StoreErrorO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StoreError",
+                "printedName": "YKIAPStoreKit.StoreError",
+                "usr": "s:13YKIAPStoreKit10StoreErrorO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13YKIAPStoreKit10StoreErrorO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s13YKIAPStoreKit10StoreErrorO2eeoiySbAC_ACtFZ",
+            "moduleName": "YKIAPStoreKit",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13YKIAPStoreKit10StoreErrorO9hashValueSivp",
+            "mangledName": "$s13YKIAPStoreKit10StoreErrorO9hashValueSivp",
+            "moduleName": "YKIAPStoreKit",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13YKIAPStoreKit10StoreErrorO9hashValueSivg",
+                "mangledName": "$s13YKIAPStoreKit10StoreErrorO9hashValueSivg",
+                "moduleName": "YKIAPStoreKit",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13YKIAPStoreKit10StoreErrorO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s13YKIAPStoreKit10StoreErrorO4hash4intoys6HasherVz_tF",
+            "moduleName": "YKIAPStoreKit",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:13YKIAPStoreKit10StoreErrorO",
+        "mangledName": "$s13YKIAPStoreKit10StoreErrorO",
+        "moduleName": "YKIAPStoreKit",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "YKIAPStoreKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "YKIAPStoreKit"
+      },
+      {
+        "kind": "Import",
+        "name": "StoreKit",
+        "printedName": "StoreKit",
+        "declKind": "Import",
+        "moduleName": "YKIAPStoreKit"
+      },
+      {
+        "kind": "Import",
+        "name": "YKIAPStoreKitSDK",
+        "printedName": "YKIAPStoreKitSDK",
+        "declKind": "Import",
+        "moduleName": "YKIAPStoreKit"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "YKProductInfos",
+        "printedName": "YKProductInfos",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "sharedInstance",
+            "printedName": "sharedInstance",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "YKProductInfos",
+                "printedName": "YKIAPStoreKit.YKProductInfos",
+                "usr": "c:@M@YKIAPStoreKit@objc(cs)YKProductInfos"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@YKIAPStoreKit@objc(cs)YKProductInfos(cpy)sharedInstance",
+            "mangledName": "$s13YKIAPStoreKit14YKProductInfosC14sharedInstanceACvpZ",
+            "moduleName": "YKIAPStoreKit",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "YKProductInfos",
+                    "printedName": "YKIAPStoreKit.YKProductInfos",
+                    "usr": "c:@M@YKIAPStoreKit@objc(cs)YKProductInfos"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@YKIAPStoreKit@objc(cs)YKProductInfos(cm)sharedInstance",
+                "mangledName": "$s13YKIAPStoreKit14YKProductInfosC14sharedInstanceACvgZ",
+                "moduleName": "YKIAPStoreKit",
+                "static": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "productUDID",
+            "printedName": "productUDID",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13YKIAPStoreKit14YKProductInfosC11productUDIDSSvp",
+            "mangledName": "$s13YKIAPStoreKit14YKProductInfosC11productUDIDSSvp",
+            "moduleName": "YKIAPStoreKit",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13YKIAPStoreKit14YKProductInfosC11productUDIDSSvg",
+                "mangledName": "$s13YKIAPStoreKit14YKProductInfosC11productUDIDSSvg",
+                "moduleName": "YKIAPStoreKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13YKIAPStoreKit14YKProductInfosC11productUDIDSSvs",
+                "mangledName": "$s13YKIAPStoreKit14YKProductInfosC11productUDIDSSvs",
+                "moduleName": "YKIAPStoreKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13YKIAPStoreKit14YKProductInfosC11productUDIDSSvM",
+                "mangledName": "$s13YKIAPStoreKit14YKProductInfosC11productUDIDSSvM",
+                "moduleName": "YKIAPStoreKit",
+                "implicit": true,
+                "intro_iOS": "15.0",
+                "declAttributes": [
+                  "Final",
+                  "Available"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "transatianDic",
+            "printedName": "transatianDic",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NSMutableDictionary",
+                "printedName": "Foundation.NSMutableDictionary",
+                "usr": "c:objc(cs)NSMutableDictionary"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13YKIAPStoreKit14YKProductInfosC13transatianDicSo19NSMutableDictionaryCvp",
+            "mangledName": "$s13YKIAPStoreKit14YKProductInfosC13transatianDicSo19NSMutableDictionaryCvp",
+            "moduleName": "YKIAPStoreKit",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSMutableDictionary",
+                    "printedName": "Foundation.NSMutableDictionary",
+                    "usr": "c:objc(cs)NSMutableDictionary"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13YKIAPStoreKit14YKProductInfosC13transatianDicSo19NSMutableDictionaryCvg",
+                "mangledName": "$s13YKIAPStoreKit14YKProductInfosC13transatianDicSo19NSMutableDictionaryCvg",
+                "moduleName": "YKIAPStoreKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSMutableDictionary",
+                    "printedName": "Foundation.NSMutableDictionary",
+                    "usr": "c:objc(cs)NSMutableDictionary"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13YKIAPStoreKit14YKProductInfosC13transatianDicSo19NSMutableDictionaryCvs",
+                "mangledName": "$s13YKIAPStoreKit14YKProductInfosC13transatianDicSo19NSMutableDictionaryCvs",
+                "moduleName": "YKIAPStoreKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13YKIAPStoreKit14YKProductInfosC13transatianDicSo19NSMutableDictionaryCvM",
+                "mangledName": "$s13YKIAPStoreKit14YKProductInfosC13transatianDicSo19NSMutableDictionaryCvM",
+                "moduleName": "YKIAPStoreKit",
+                "implicit": true,
+                "intro_iOS": "15.0",
+                "declAttributes": [
+                  "Final",
+                  "Available"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "currentProducts",
+            "printedName": "currentProducts",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[StoreKit.Product]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Product",
+                    "printedName": "StoreKit.Product",
+                    "usr": "s:8StoreKit7ProductV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13YKIAPStoreKit14YKProductInfosC15currentProductsSay05StoreB07ProductVGvp",
+            "mangledName": "$s13YKIAPStoreKit14YKProductInfosC15currentProductsSay05StoreB07ProductVGvp",
+            "moduleName": "YKIAPStoreKit",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[StoreKit.Product]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Product",
+                        "printedName": "StoreKit.Product",
+                        "usr": "s:8StoreKit7ProductV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13YKIAPStoreKit14YKProductInfosC15currentProductsSay05StoreB07ProductVGvg",
+                "mangledName": "$s13YKIAPStoreKit14YKProductInfosC15currentProductsSay05StoreB07ProductVGvg",
+                "moduleName": "YKIAPStoreKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[StoreKit.Product]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Product",
+                        "printedName": "StoreKit.Product",
+                        "usr": "s:8StoreKit7ProductV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13YKIAPStoreKit14YKProductInfosC15currentProductsSay05StoreB07ProductVGvs",
+                "mangledName": "$s13YKIAPStoreKit14YKProductInfosC15currentProductsSay05StoreB07ProductVGvs",
+                "moduleName": "YKIAPStoreKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13YKIAPStoreKit14YKProductInfosC15currentProductsSay05StoreB07ProductVGvM",
+                "mangledName": "$s13YKIAPStoreKit14YKProductInfosC15currentProductsSay05StoreB07ProductVGvM",
+                "moduleName": "YKIAPStoreKit",
+                "implicit": true,
+                "intro_iOS": "15.0",
+                "declAttributes": [
+                  "Final",
+                  "Available"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "storeProducts",
+            "printedName": "storeProducts",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : StoreKit.Product]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : StoreKit.Product]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Product",
+                        "printedName": "StoreKit.Product",
+                        "usr": "s:8StoreKit7ProductV"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13YKIAPStoreKit14YKProductInfosC13storeProductsSDySS05StoreB07ProductVGSgvp",
+            "mangledName": "$s13YKIAPStoreKit14YKProductInfosC13storeProductsSDySS05StoreB07ProductVGSgvp",
+            "moduleName": "YKIAPStoreKit",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.String : StoreKit.Product]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[Swift.String : StoreKit.Product]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Product",
+                            "printedName": "StoreKit.Product",
+                            "usr": "s:8StoreKit7ProductV"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13YKIAPStoreKit14YKProductInfosC13storeProductsSDySS05StoreB07ProductVGSgvg",
+                "mangledName": "$s13YKIAPStoreKit14YKProductInfosC13storeProductsSDySS05StoreB07ProductVGSgvg",
+                "moduleName": "YKIAPStoreKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.String : StoreKit.Product]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[Swift.String : StoreKit.Product]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Product",
+                            "printedName": "StoreKit.Product",
+                            "usr": "s:8StoreKit7ProductV"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13YKIAPStoreKit14YKProductInfosC13storeProductsSDySS05StoreB07ProductVGSgvs",
+                "mangledName": "$s13YKIAPStoreKit14YKProductInfosC13storeProductsSDySS05StoreB07ProductVGSgvs",
+                "moduleName": "YKIAPStoreKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13YKIAPStoreKit14YKProductInfosC13storeProductsSDySS05StoreB07ProductVGSgvM",
+                "mangledName": "$s13YKIAPStoreKit14YKProductInfosC13storeProductsSDySS05StoreB07ProductVGSgvM",
+                "moduleName": "YKIAPStoreKit",
+                "implicit": true,
+                "intro_iOS": "15.0",
+                "declAttributes": [
+                  "Final",
+                  "Available"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "sdkProducts",
+            "printedName": "sdkProducts",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : StoreKit.Product]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Product",
+                    "printedName": "StoreKit.Product",
+                    "usr": "s:8StoreKit7ProductV"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13YKIAPStoreKit14YKProductInfosC11sdkProductsSDySS05StoreB07ProductVGvp",
+            "mangledName": "$s13YKIAPStoreKit14YKProductInfosC11sdkProductsSDySS05StoreB07ProductVGvp",
+            "moduleName": "YKIAPStoreKit",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : StoreKit.Product]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Product",
+                        "printedName": "StoreKit.Product",
+                        "usr": "s:8StoreKit7ProductV"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13YKIAPStoreKit14YKProductInfosC11sdkProductsSDySS05StoreB07ProductVGvg",
+                "mangledName": "$s13YKIAPStoreKit14YKProductInfosC11sdkProductsSDySS05StoreB07ProductVGvg",
+                "moduleName": "YKIAPStoreKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : StoreKit.Product]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Product",
+                        "printedName": "StoreKit.Product",
+                        "usr": "s:8StoreKit7ProductV"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13YKIAPStoreKit14YKProductInfosC11sdkProductsSDySS05StoreB07ProductVGvs",
+                "mangledName": "$s13YKIAPStoreKit14YKProductInfosC11sdkProductsSDySS05StoreB07ProductVGvs",
+                "moduleName": "YKIAPStoreKit",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13YKIAPStoreKit14YKProductInfosC11sdkProductsSDySS05StoreB07ProductVGvM",
+                "mangledName": "$s13YKIAPStoreKit14YKProductInfosC11sdkProductsSDySS05StoreB07ProductVGvM",
+                "moduleName": "YKIAPStoreKit",
+                "implicit": true,
+                "intro_iOS": "15.0",
+                "declAttributes": [
+                  "Final",
+                  "Available"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "getProductInfos",
+            "printedName": "getProductInfos(_:completionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSArray",
+                "printedName": "Foundation.NSArray",
+                "usr": "c:objc(cs)NSArray"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@YKIAPStoreKit@objc(cs)YKProductInfos(im)getProductInfos:completionHandler:",
+            "mangledName": "$s13YKIAPStoreKit14YKProductInfosC010getProductD0_17completionHandlerySo7NSArrayC_yyctF",
+            "moduleName": "YKIAPStoreKit",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@YKIAPStoreKit@objc(cs)YKProductInfos",
+        "mangledName": "$s13YKIAPStoreKit14YKProductInfosC",
+        "moduleName": "YKIAPStoreKit",
+        "intro_iOS": "15.0",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "ObjC",
+          "Available"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/lailibo\/Documents\/git\/IAPPay\/Source\/YKIAPStoreKit\/YKIAPStoreKit\/swift\/YKSwiftPaymentInfo.swift",
+      "kind": "Array",
+      "offset": 452,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/lailibo\/Documents\/git\/IAPPay\/Source\/YKIAPStoreKit\/YKIAPStoreKit\/swift\/YKSwiftPurchase.swift",
+      "kind": "Array",
+      "offset": 747,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/lailibo\/Documents\/git\/IAPPay\/Source\/YKIAPStoreKit\/YKIAPStoreKit\/swift\/YKSwiftPurchase.swift",
+      "kind": "BooleanLiteral",
+      "offset": 905,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/lailibo\/Documents\/git\/IAPPay\/Source\/YKIAPStoreKit\/YKIAPStoreKit\/swift\/YKProductInfos.swift",
+      "kind": "Array",
+      "offset": 487,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/lailibo\/Documents\/git\/IAPPay\/Source\/YKIAPStoreKit\/YKIAPStoreKit\/swift\/YKProductInfos.swift",
+      "kind": "Dictionary",
+      "offset": 534,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/lailibo\/Documents\/git\/IAPPay\/Source\/YKIAPStoreKit\/YKIAPStoreKit\/swift\/YKProductInfos.swift",
+      "kind": "Dictionary",
+      "offset": 579,
+      "length": 3,
+      "value": "[]"
+    }
+  ]
+}
