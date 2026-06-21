@@ -80,6 +80,64 @@ fi
 
 COMMIT_MSG="${COMMIT_MSG:-${VERSION} SDK更新}"
 
+# 网络请求：先按当前环境（可开代理），失败则自动去掉代理重试一次
+_network_retry() {
+  local label="$1"
+  shift
+  local had_proxy=false
+  if [[ -n "${ALL_PROXY:-}${HTTP_PROXY:-}${HTTPS_PROXY:-}${http_proxy:-}${https_proxy:-}" ]]; then
+    had_proxy=true
+  fi
+
+  if "$@"; then
+    return 0
+  fi
+
+  if [[ "$had_proxy" == true ]]; then
+    warn "${label} 失败，自动关闭代理重试..."
+    if (
+      unset ALL_PROXY HTTP_PROXY HTTPS_PROXY http_proxy https_proxy GIT_SSH_COMMAND
+      "$@"
+    ); then
+      log "${label} 在无代理模式下成功（代理环境未改动，可继续开着代理）"
+      return 0
+    fi
+  fi
+
+  err "${label} 失败"
+  return 1
+}
+
+# 使用 HTTPS + gh 凭据，避免 SSH 走代理异常（如 127.0.0.1:7890）
+setup_git_github() {
+  if [[ "$DRY_RUN" == true ]]; then
+    return 0
+  fi
+  if command -v gh >/dev/null 2>&1; then
+    gh auth setup-git 2>/dev/null || true
+  fi
+  local dir url repo_path
+  for dir in "$SDK_PACKAGE_DIR" "$ZSSDK_DIR"; do
+    [[ -d "$dir/.git" ]] || continue
+    url="$(git -C "$dir" remote get-url origin 2>/dev/null || true)"
+    if [[ "$url" == git@github.com:* ]]; then
+      repo_path="${url#git@github.com:}"
+      repo_path="${repo_path%.git}"
+      git -C "$dir" remote set-url origin "https://github.com/${repo_path}.git"
+      log "Git remote 已切换为 HTTPS: ${repo_path}"
+    fi
+  done
+}
+
+git_push() {
+  local ref="$1"
+  if [[ "$DRY_RUN" == true ]]; then
+    echo "[dry-run] git push origin $ref"
+    return 0
+  fi
+  _network_retry "git push origin $ref" git push origin "$ref"
+}
+
 run() {
   if [[ "$DRY_RUN" == true ]]; then
     echo "[dry-run] $*"
@@ -167,6 +225,8 @@ fi
 
 collect_zip_files
 
+setup_git_github
+
 # ========== Step 3: SDKPackage git commit + tag ==========
 log "SDKPackage: 提交并打 tag ${VERSION}..."
 cd "$SDK_PACKAGE_DIR"
@@ -182,14 +242,14 @@ if git rev-parse "$VERSION" >/dev/null 2>&1; then
   warn "tag $VERSION 已存在，将删除后重建"
   run git tag -d "$VERSION"
   if [[ "$SKIP_PUSH" != true && "$DRY_RUN" != true ]]; then
-    git push origin ":refs/tags/$VERSION" 2>/dev/null || true
+    _network_retry "删除远程 tag $VERSION" git push origin ":refs/tags/$VERSION" 2>/dev/null || true
   fi
 fi
 run git tag "$VERSION"
 
 if [[ "$SKIP_PUSH" != true ]]; then
-  run git push origin main
-  run git push origin "$VERSION"
+  git_push main
+  git_push "$VERSION"
 fi
 
 # ========== Step 4: 创建 GitHub Release ==========
@@ -199,7 +259,7 @@ create_release_gh() {
   if ! command -v gh >/dev/null 2>&1; then
     return 1
   fi
-  gh release create "$VERSION" \
+  _network_retry "gh release create" gh release create "$VERSION" \
     --repo "$GITHUB_RELEASE_REPO" \
     --title "$VERSION" \
     --notes "Release $VERSION" \
@@ -279,7 +339,7 @@ if [[ "$DRY_RUN" == true ]]; then
   echo "[dry-run] bash update_checksum.sh"
 else
   RETRY=0
-  until bash "$ZSSDK_DIR/update_checksum.sh"; do
+  until _network_retry "checksum 更新" bash "$ZSSDK_DIR/update_checksum.sh"; do
     RETRY=$((RETRY + 1))
     if [[ $RETRY -ge 6 ]]; then
       err "checksum 更新失败（已重试 5 次）"
@@ -316,14 +376,14 @@ if git rev-parse "$VERSION" >/dev/null 2>&1; then
   warn "tag $VERSION 已存在，将删除后重建"
   run git tag -d "$VERSION"
   if [[ "$SKIP_PUSH" != true && "$DRY_RUN" != true ]]; then
-    git push origin ":refs/tags/$VERSION" 2>/dev/null || true
+    _network_retry "删除远程 tag $VERSION" git push origin ":refs/tags/$VERSION" 2>/dev/null || true
   fi
 fi
 run git tag "$VERSION"
 
 if [[ "$SKIP_PUSH" != true ]]; then
-  run git push origin main
-  run git push origin "$VERSION"
+  git_push main
+  git_push "$VERSION"
 fi
 
 echo ""
