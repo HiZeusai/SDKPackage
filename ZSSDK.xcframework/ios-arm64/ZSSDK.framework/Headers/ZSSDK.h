@@ -18,7 +18,11 @@
 #import "ZSWebParams.h"
 #import "ZSData.h"
 #import "ZSSDKPublic.h"
-@class UIView;
+#import "ZSAdSessionTypes.h"
+#import "ZSRewardedAdSession.h"
+#import "ZSSplashAdSession.h"
+#import "ZSInterstitialAdSession.h"
+#import "ZSBannerAdSession.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -56,8 +60,15 @@ NS_SWIFT_NAME(configure(url:appId:completion:));
              withPlugin:(NSString *)pluginName
 NS_SWIFT_NAME(setPluginParams(_:forPlugin:));
 
+/// Adjust deferred deeplink 回调（block 模式）。
+/// @param completion ret=STATUS_SUCCESS；result=deeplink URL；extendCode=1 Adjust 自动打开，0 游戏自行处理
+- (void)setAdjustDeferredDeeplinkCompletion:(void(^)(int ret, NSString *result, int extendCode))completion
+NS_SWIFT_NAME(setAdjustDeferredDeeplinkCompletion(_:));
 
-/// 隐私权限申请
+/// 同步读取 Keychain 中已缓存的 IDFA（未授权时可能为空）。
+- (NSString *)getIDFA NS_SWIFT_NAME(getIDFA());
+
+/// 请求 ATT 并异步返回 IDFA。
 /// @param completion 返回参数
 - (void)getIDFAInfo:(void(^)(NSString *result))completion
 NS_SWIFT_NAME(getIDFAInfo(completion:));
@@ -66,6 +77,9 @@ NS_SWIFT_NAME(getIDFAInfo(completion:));
 - (void)getIDFVInfo:(void(^)(NSString *result))completion
 NS_SWIFT_NAME(getIDFVInfo(completion:));
 
+/// @param completion 返回参数
+- (void)getAccidInfo:(void(^)(NSString *result))completion
+NS_SWIFT_NAME(getAccidInfo(completion:));
 
 /// 平台登陆接口
 /// @param completion 返回参数
@@ -130,66 +144,31 @@ NS_SWIFT_NAME(trackEvent(_:parameters:));
 withCompletion:(void(^)(int ret, NSString *result,int extendCode))completion
 NS_SWIFT_NAME(share(_:completion:));
 
-// 开屏广告 - 带 completion
-- (void)loadSplashAd:(NSString *)unitId
-      andPlacementId:(NSString *)placementId
-      withCompletion:(void(^)(int ret, NSString *result,int extendCode))completion
-NS_SWIFT_NAME(loadSplashAd(unitId:placementId:completion:));
+#pragma mark - 开屏广告
 
+- (ZSSplashAdSession *)prepareSplashAdSessionWithUnitId:(NSString *)unitId
+                                       andPlacementId:(NSString *)placementId
+NS_SWIFT_NAME(prepareSplashAdSession(unitId:placementId:));
 
-- (void)showSplashAd:(NSString *)unitId
-     andPlacementId:(NSString *)placementId
-      withCompletion:(void(^)(int ret, NSString *result,int extendCode))completion
-NS_SWIFT_NAME(showSplashAd(unitId:placementId:completion:));
+#pragma mark - 插屏广告
 
+- (ZSInterstitialAdSession *)prepareInterstitialAdSessionWithUnitId:(NSString *)unitId
+                                                   andPlacementId:(NSString *)placementId
+NS_SWIFT_NAME(prepareInterstitialAdSession(unitId:placementId:));
 
-// 插屏广告 - 带 completion
-- (void)loadInterstitiaAd:(NSString *)unitId
-          andPlacementId:(NSString *)placementId
-           withCompletion:(void(^)(int ret, NSString *result,int extendCode))completion
-NS_SWIFT_NAME(loadInterstitialAd(unitId:placementId:completion:));
+#pragma mark - 激励视频广告
 
+- (ZSRewardedAdSession *)prepareRewardedSessionWithUnitId:(NSString *)unitId
+                                           andPlacementId:(NSString *)placementId
+NS_SWIFT_NAME(prepareRewardedSession(unitId:placementId:));
 
-- (void)showInterstitialAd:(NSString *)unitId
-           andPlacementId:(NSString *)placementId
-            withCompletion:(void(^)(int ret, NSString *result,int extendCode))completion
-NS_SWIFT_NAME(showInterstitialAd(unitId:placementId:completion:));
+#pragma mark - 横幅广告
 
-
-// 激励视频广告 - 带 completion
-- (void)loadRewardVideoAd:(NSString *)unitId
-           andPlacementId:(NSString *)placementId
-           withCompletion:(void(^)(int ret, NSString *result,int extendCode))completion
-NS_SWIFT_NAME(loadRewardedAd(unitId:placementId:completion:));
-
-
-- (void)showRewardVideoAd:(NSString *)unitId
-           andPlacementId:(NSString *)placementId
-           withCompletion:(void(^)(int ret, NSString *result,int extendCode))completion
-NS_SWIFT_NAME(showRewardedAd(unitId:placementId:completion:));
-
-
-// 横幅广告 - 带 completion
-- (void)loadBannerAd:(NSString *)unitId
-      andPlacementId:(NSString *)placementId
-              adSize:(CGSize)adSize
-              adView:(UIView *)adView
-      withCompletion:(void(^)(int ret, NSString *result,int extendCode))completion
-NS_SWIFT_NAME(loadBannerAd(unitId:placementId:size:in:completion:));
-
-
-- (void)showBannerAd:(NSString *)unitId
-      andPlacementId:(NSString *)placementId
-              adSize:(CGSize)adSize
-              adView:(UIView *)adView
-      withCompletion:(void(^)(int ret, NSString *result,int extendCode))completion
-NS_SWIFT_NAME(showBannerAd(unitId:placementId:size:in:completion:));
-
-
-- (void)removeBannerAd:(NSString *)unitId
-        andPlacementId:(NSString *)placementId
-        withCompletion:(void(^)(int ret, NSString *result,int extendCode))completion
-NS_SWIFT_NAME(removeBannerAd(unitId:placementId:completion:));
+- (ZSBannerAdSession *)prepareBannerAdSessionWithUnitId:(NSString *)unitId
+                                       andPlacementId:(NSString *)placementId
+                                               adSize:(CGSize)adSize
+                                        containerView:(nullable UIView *)containerView
+NS_SWIFT_NAME(prepareBannerAdSession(unitId:placementId:size:container:));
 
 
 - (void)loadNativeAd NS_SWIFT_NAME(loadNativeAd());

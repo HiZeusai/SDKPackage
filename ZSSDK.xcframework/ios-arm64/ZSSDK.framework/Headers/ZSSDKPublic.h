@@ -16,6 +16,10 @@
 #import "ZSAppConfig.h"
 #import "ZSWebParams.h"
 #import "ZSData.h"
+#import "ZSSplashAdSession.h"
+#import "ZSInterstitialAdSession.h"
+#import "ZSRewardedAdSession.h"
+#import "ZSBannerAdSession.h"
 
 @class UIView;
 NS_ASSUME_NONNULL_BEGIN
@@ -52,7 +56,10 @@ NS_SWIFT_NAME(configure(delegate:url:appId:));
 NS_SWIFT_NAME(setPluginParams(_:forPlugin:));
 
 
-/// 隐私权限申请
+/// 同步读取 Keychain 中已缓存的 IDFA（未授权时可能为空）。
+- (NSString *)getIDFA NS_SWIFT_NAME(getIDFA());
+
+/// 请求 ATT 并异步返回 IDFA。
 /// @param completion 返回参数
 - (void)getIDFAInfo:(void(^)(NSString *result))completion
 NS_SWIFT_NAME(getIDFAInfo(completion:));
@@ -99,65 +106,31 @@ NS_SWIFT_NAME(share(_:completion:));
         parameters:(nullable NSDictionary<NSString *, id> *)parameters
 NS_SWIFT_NAME(trackEvent(_:parameters:));
 
-/// 开屏广告
-- (void)loadSplashAd:(NSString *)unitId
-     andPlacementId:(NSString *)placementId
+#pragma mark - 广告（delegate 模式）
+
+/// 广告事件走 `ZSDelegateProtocol`：`method == ZSCallbackType_AD`，`extendCode` 区分子类型。使用 `prepare*Session` 后调用 `-load` / `-show` / `-remove`（横幅）。
+
+- (ZSSplashAdSession *)prepareSplashAdSessionWithUnitId:(NSString *)unitId
+                                       andPlacementId:(NSString *)placementId
 __attribute__((swift_attr("@MainActor")))
-NS_SWIFT_NAME(loadSplashAd(unitId:placementId:));
+NS_SWIFT_NAME(prepareSplashAdSession(unitId:placementId:));
 
-- (void)showSplashAd:(NSString *)unitId
-     andPlacementId:(NSString *)placementId
+- (ZSInterstitialAdSession *)prepareInterstitialAdSessionWithUnitId:(NSString *)unitId
+                                                   andPlacementId:(NSString *)placementId
 __attribute__((swift_attr("@MainActor")))
-NS_SWIFT_NAME(showSplashAd(unitId:placementId:));
+NS_SWIFT_NAME(prepareInterstitialAdSession(unitId:placementId:));
 
-/// 插屏广告
-
-- (void)loadInterstitiaAd:(NSString *)unitId
-          andPlacementId:(NSString *)placementId
+- (ZSRewardedAdSession *)prepareRewardedSessionWithUnitId:(NSString *)unitId
+                                           andPlacementId:(NSString *)placementId
 __attribute__((swift_attr("@MainActor")))
-NS_SWIFT_NAME(loadInterstitialAd(unitId:placementId:));
+NS_SWIFT_NAME(prepareRewardedSession(unitId:placementId:));
 
-
-- (void)showInterstitialAd:(NSString *)unitId
-           andPlacementId:(NSString *)placementId
+- (ZSBannerAdSession *)prepareBannerAdSessionWithUnitId:(NSString *)unitId
+                                       andPlacementId:(NSString *)placementId
+                                               adSize:(CGSize)adSize
+                                        containerView:(nullable UIView *)containerView
 __attribute__((swift_attr("@MainActor")))
-NS_SWIFT_NAME(showInterstitialAd(unitId:placementId:));
-
-/// 激励视频广告
-
-- (void)loadRewardVideoAd:(NSString *)unitId
-           andPlacementId:(NSString *)placementId
-__attribute__((swift_attr("@MainActor")))
-NS_SWIFT_NAME(loadRewardedAd(unitId:placementId:));
-
-
-- (void)showRewardVideoAd:(NSString *)unitId
-           andPlacementId:(NSString *)placementId
-__attribute__((swift_attr("@MainActor")))
-NS_SWIFT_NAME(showRewardedAd(unitId:placementId:));
-
-/// 横幅广告
-
-- (void)loadBannerAd:(NSString *)unitId
-      andPlacementId:(NSString *)placementId
-              adSize:(CGSize)adSize
-              adView:(UIView *)adView
-__attribute__((swift_attr("@MainActor")))
-NS_SWIFT_NAME(loadBannerAd(unitId:placementId:size:in:));
-
-
-- (void)showBannerAd:(NSString *)unitId
-      andPlacementId:(NSString *)placementId
-              adSize:(CGSize)adSize
-              adView:(UIView *)adView
-__attribute__((swift_attr("@MainActor")))
-NS_SWIFT_NAME(showBannerAd(unitId:placementId:size:in:));
-
-
-- (void)removeBannerAd:(NSString *)unitId
-        andPlacementId:(NSString *)placementId
-__attribute__((swift_attr("@MainActor")))
-NS_SWIFT_NAME(removeBannerAd(unitId:placementId:));
+NS_SWIFT_NAME(prepareBannerAdSession(unitId:placementId:size:container:));
 
 - (void)loadNativeAd NS_SWIFT_NAME(loadNativeAd());
 

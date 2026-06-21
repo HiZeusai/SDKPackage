@@ -18,9 +18,19 @@ typedef NS_ENUM(NSInteger, ZSCallbackType) {
     ZSCallbackType_PRODUCT_BIND,
     ZSCallbackType_DELETE_ACCOUNT,
     ZSCallbackType_QUERY_PRODUCT_DETAILS,
+    ZSCallbackType_TRACK_EVENT,
     ZSCallbackType_AD_FINISH_LOADING,
     ZSCallbackType_AD,
-    ZSCallbackType_TRACK_EVENT,
+    ZSCallbackType_AD_DID_Show,
+    ZSCallbackType_AD_DID_CLICK,
+    ZSCallbackType_AD_DID_HIDE,
+    ZSCallbackType_AD_DID_FAIL_DISPLAY,
+    ZSCallbackType_AD_DID_PAY_REVENUE,
+    ZSCallbackType_AD_REMOVE_BANNER,
+    /// 激励视频：用户满足条件应发放奖励（AppLovin didRewardUser）
+    ZSCallbackType_AD_DID_REWARD_USER,
+    /// Adjust deferred deeplink；extendCode: 1=Adjust 自动打开，0=游戏自行处理
+    ZSCallbackType_ADJUST_DEFERRED_DEEPLINK,
 };
 
 // Log level for Bugly Log
