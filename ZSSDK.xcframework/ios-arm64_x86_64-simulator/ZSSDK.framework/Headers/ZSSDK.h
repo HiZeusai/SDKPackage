@@ -82,9 +82,18 @@ NS_SWIFT_NAME(getIDFVInfo(completion:));
 NS_SWIFT_NAME(getAccidInfo(completion:));
 
 /// 平台登陆接口
+/// @param requestATT @YES 立即弹 ATT；@NO 不弹；nil 读服务端 plugins.user(GSUserZU).extras.att_prompt_on_login
 /// @param completion 返回参数
+- (void)loginWithRequestATT:(nullable NSNumber *)requestATT
+             withCompletion:(void(^)(int ret, NSString *result,int extendCode))completion
+NS_SWIFT_NAME(login(requestATT:completion:));
+
+/// 平台登陆接口
+/// @param completion 返回参数
+/// @deprecated 请使用 -loginWithRequestATT:withCompletion:；传 nil 作为 requestATT 时行为与旧接口一致
 - (void)loginWithCompletion:(void(^)(int ret, NSString *result,int extendCode))completion
-NS_SWIFT_NAME(login(completion:));
+NS_SWIFT_NAME(login(completion:))
+API_DEPRECATED_WITH_REPLACEMENT("-loginWithRequestATT:withCompletion:", ios(2.0, 99.0));
 
 /// 平台登出接口
 /// @param completion 返回参数
@@ -147,28 +156,24 @@ NS_SWIFT_NAME(share(_:completion:));
 #pragma mark - 开屏广告
 
 - (ZSSplashAdSession *)prepareSplashAdSessionWithUnitId:(NSString *)unitId
-                                       andPlacementId:(NSString *)placementId
-NS_SWIFT_NAME(prepareSplashAdSession(unitId:placementId:));
+NS_SWIFT_NAME(prepareSplashAdSession(unitId:));
 
 #pragma mark - 插屏广告
 
 - (ZSInterstitialAdSession *)prepareInterstitialAdSessionWithUnitId:(NSString *)unitId
-                                                   andPlacementId:(NSString *)placementId
-NS_SWIFT_NAME(prepareInterstitialAdSession(unitId:placementId:));
+NS_SWIFT_NAME(prepareInterstitialAdSession(unitId:));
 
 #pragma mark - 激励视频广告
 
 - (ZSRewardedAdSession *)prepareRewardedSessionWithUnitId:(NSString *)unitId
-                                           andPlacementId:(NSString *)placementId
-NS_SWIFT_NAME(prepareRewardedSession(unitId:placementId:));
+NS_SWIFT_NAME(prepareRewardedSession(unitId:));
 
 #pragma mark - 横幅广告
 
 - (ZSBannerAdSession *)prepareBannerAdSessionWithUnitId:(NSString *)unitId
-                                       andPlacementId:(NSString *)placementId
                                                adSize:(CGSize)adSize
                                         containerView:(nullable UIView *)containerView
-NS_SWIFT_NAME(prepareBannerAdSession(unitId:placementId:size:container:));
+NS_SWIFT_NAME(prepareBannerAdSession(unitId:size:container:));
 
 
 - (void)loadNativeAd NS_SWIFT_NAME(loadNativeAd());

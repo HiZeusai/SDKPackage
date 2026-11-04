@@ -13,7 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ZSBannerAdSession : NSObject
 
 @property (nonatomic, copy, readonly) NSString *unitId;
-@property (nonatomic, copy, readonly) NSString *placementId;
 @property (nonatomic, assign, readonly) CGSize adSize;
 @property (nonatomic, weak, readonly, nullable) UIView *containerView;
 
@@ -27,7 +26,6 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)new NS_UNAVAILABLE;
 
 - (instancetype)initWithUnitId:(NSString *)unitId
-                andPlacementId:(NSString *)placementId
                           adSize:(CGSize)adSize
                    containerView:(nullable UIView *)containerView NS_DESIGNATED_INITIALIZER;
 
@@ -35,8 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)loadWithCompletion:(nullable ZSAdSessionEventHandler)completion
 NS_SWIFT_NAME(load(completion:));
 
-/// 安装 `on*` 并请求展示/刷新。
-- (void)show NS_SWIFT_NAME(show());
+- (void)showWithPlacementId:(nullable NSString *)placementId NS_SWIFT_NAME(show(placementId:));
 
 /// 移除横幅视图并卸载 session 已安装的展示回调；`extendCode` 为 `ZSCallbackType_AD_REMOVE_BANNER`。
 - (void)removeWithCompletion:(nullable ZSAdSessionEventHandler)completion

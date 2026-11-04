@@ -15,7 +15,6 @@ typedef ZSAdSessionEventHandler ZSRewardedAdEventHandler;
 @interface ZSRewardedAdSession : NSObject
 
 @property (nonatomic, copy, readonly) NSString *unitId;
-@property (nonatomic, copy, readonly) NSString *placementId;
 
 @property (nonatomic, copy, nullable) ZSAdSessionEventHandler onShow;
 @property (nonatomic, copy, nullable) ZSAdSessionEventHandler onClick;
@@ -27,14 +26,13 @@ typedef ZSAdSessionEventHandler ZSRewardedAdEventHandler;
 - (instancetype)init NS_UNAVAILABLE;
 + (instancetype)new NS_UNAVAILABLE;
 
-- (instancetype)initWithUnitId:(NSString *)unitId andPlacementId:(NSString *)placementId NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithUnitId:(NSString *)unitId NS_DESIGNATED_INITIALIZER;
 
 /// 预加载（`extendCode == AD_FINISH_LOADING`）。
 - (void)loadWithCompletion:(nullable ZSAdSessionEventHandler)completion
 NS_SWIFT_NAME(load(completion:));
 
-/// 安装生命周期 block 并请求展示。
-- (void)show NS_SWIFT_NAME(show());
+- (void)showWithPlacementId:(nullable NSString *)placementId NS_SWIFT_NAME(show(placementId:));
 
 /// 清除已安装的展示相关 block；若在 `loadWithCompletion:` 后尚未收到加载回调，同时清除加载 completion。
 - (void)invalidate;

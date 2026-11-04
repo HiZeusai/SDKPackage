@@ -111,26 +111,22 @@ NS_SWIFT_NAME(trackEvent(_:parameters:));
 /// 广告事件走 `ZSDelegateProtocol`：`method == ZSCallbackType_AD`，`extendCode` 区分子类型。使用 `prepare*Session` 后调用 `-load` / `-show` / `-remove`（横幅）。
 
 - (ZSSplashAdSession *)prepareSplashAdSessionWithUnitId:(NSString *)unitId
-                                       andPlacementId:(NSString *)placementId
 __attribute__((swift_attr("@MainActor")))
-NS_SWIFT_NAME(prepareSplashAdSession(unitId:placementId:));
+NS_SWIFT_NAME(prepareSplashAdSession(unitId:));
 
 - (ZSInterstitialAdSession *)prepareInterstitialAdSessionWithUnitId:(NSString *)unitId
-                                                   andPlacementId:(NSString *)placementId
 __attribute__((swift_attr("@MainActor")))
-NS_SWIFT_NAME(prepareInterstitialAdSession(unitId:placementId:));
+NS_SWIFT_NAME(prepareInterstitialAdSession(unitId:));
 
 - (ZSRewardedAdSession *)prepareRewardedSessionWithUnitId:(NSString *)unitId
-                                           andPlacementId:(NSString *)placementId
 __attribute__((swift_attr("@MainActor")))
-NS_SWIFT_NAME(prepareRewardedSession(unitId:placementId:));
+NS_SWIFT_NAME(prepareRewardedSession(unitId:));
 
 - (ZSBannerAdSession *)prepareBannerAdSessionWithUnitId:(NSString *)unitId
-                                       andPlacementId:(NSString *)placementId
                                                adSize:(CGSize)adSize
                                         containerView:(nullable UIView *)containerView
 __attribute__((swift_attr("@MainActor")))
-NS_SWIFT_NAME(prepareBannerAdSession(unitId:placementId:size:container:));
+NS_SWIFT_NAME(prepareBannerAdSession(unitId:size:container:));
 
 - (void)loadNativeAd NS_SWIFT_NAME(loadNativeAd());
 
