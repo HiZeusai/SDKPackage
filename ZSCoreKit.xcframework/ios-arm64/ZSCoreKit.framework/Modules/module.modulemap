@@ -1,5 +1,5 @@
 framework module ZSCoreKit {
-  umbrella header "MASCompositeConstraint.h"
+  umbrella header "GSCoreKit.h"
   export *
   module * { export * }
 }

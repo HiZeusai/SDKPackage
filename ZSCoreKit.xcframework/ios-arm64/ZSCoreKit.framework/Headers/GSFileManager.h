@@ -72,6 +72,15 @@
 + (void)removeCachePath:(NSString *)folder;
 
 /**
+ 将对象转为 NSUserDefaults / plist 可写类型。
+ NSNull 转为 @""，字典/数组递归清洗；非法类型转为字符串。
+ 
+ @param object 原始对象
+ @return 可安全写入 UserDefaults 的对象
+ */
++ (id)gs_propertyListSafeObject:(id)object;
+
+/**
  NSUserDefault 存储对象
  
  @param value 对象值

@@ -255,8 +255,33 @@ fi
 # ========== Step 4: 创建 GitHub Release ==========
 log "创建 GitHub Release: $VERSION"
 
+# 覆盖同版本：先删除已有 Release（tag 由后续重建）
+if [[ "$DRY_RUN" != true ]]; then
+  deleted=false
+  if command -v gh >/dev/null 2>&1 && gh auth status >/dev/null 2>&1; then
+    if gh release view "$VERSION" --repo "$GITHUB_RELEASE_REPO" >/dev/null 2>&1; then
+      warn "Release $VERSION 已存在，删除后重建"
+      if _network_retry "删除 Release $VERSION" gh release delete "$VERSION" --repo "$GITHUB_RELEASE_REPO" --yes; then
+        deleted=true
+      fi
+    else
+      deleted=true
+    fi
+  fi
+  if [[ "$deleted" != true && -n "${GITHUB_TOKEN:-}" ]]; then
+    release_id=$(curl -s       -H "Authorization: token $GITHUB_TOKEN"       -H "Accept: application/vnd.github+json"       "https://api.github.com/repos/$GITHUB_RELEASE_REPO/releases/tags/$VERSION"       | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('id') or '')" 2>/dev/null || true)
+    if [[ -n "$release_id" ]]; then
+      warn "Release $VERSION 已存在，通过 API 删除后重建"
+      curl -s -X DELETE         -H "Authorization: token $GITHUB_TOKEN"         -H "Accept: application/vnd.github+json"         "https://api.github.com/repos/$GITHUB_RELEASE_REPO/releases/$release_id" >/dev/null || true
+    fi
+  fi
+fi
+
 create_release_gh() {
   if ! command -v gh >/dev/null 2>&1; then
+    return 1
+  fi
+  if ! gh auth status >/dev/null 2>&1; then
     return 1
   fi
   _network_retry "gh release create" gh release create "$VERSION" \
